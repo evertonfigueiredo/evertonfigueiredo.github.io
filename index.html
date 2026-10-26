@@ -4,15 +4,73 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Everton Figueiredo – Jogos</title>
+<meta name="description" content="Jogos mobile de Everton Figueiredo: links da Google Play e políticas de privacidade.">
 <style>
-  body { font-family: system-ui, sans-serif; background: #120c09; color: #f3e9dc; margin: 0; padding: 48px 16px; text-align: center; }
-  h1 { color: #ffd447; }
-  a { color: #6fe3ff; }
+  :root { --bg:#0f1020; --card:#1a1c33; --line:#2c2f52; --text:#eef0ff; --muted:#a3a8cc; --accent:#ffd447; --link:#6fe3ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { text-align:center; padding:56px 16px 24px; }
+  header h1 { margin:0; color:var(--accent); font-size:clamp(28px, 6vw, 44px); }
+  header p { margin:8px 0 0; color:var(--muted); }
+  main { max-width:960px; margin:0 auto; padding:16px 16px 64px; display:grid; gap:20px; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); }
+  .game { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:20px; display:flex; flex-direction:column; gap:12px; }
+  .top { display:flex; gap:14px; align-items:center; }
+  .icon { width:72px; height:72px; border-radius:18px; flex:none; object-fit:cover; background:#2a2d4d; display:grid; place-items:center; font-size:38px; }
+  .game h2 { margin:0; font-size:20px; line-height:1.2; }
+  .tag { display:inline-block; margin-top:4px; font-size:12px; color:var(--muted); }
+  .game p { margin:0; color:var(--muted); flex:1; }
+  .links { display:flex; flex-wrap:wrap; gap:8px; }
+  .links a { color:var(--bg); background:var(--link); text-decoration:none; font-weight:600; font-size:14px; padding:8px 14px; border-radius:999px; }
+  .links a.sec { background:transparent; color:var(--link); border:1px solid var(--line); }
+  .soon { font-size:14px; color:var(--muted); padding:8px 0; }
+  footer { text-align:center; color:var(--muted); font-size:14px; padding:0 16px 40px; }
 </style>
 </head>
 <body>
-  <h1>Escavação Infinita: Mina Idle</h1>
-  <p>Cave fundo, ache ouro e artefatos, derrote chefes e fique cada vez mais forte!</p>
-  <p><a href="https://play.google.com/store/apps/details?id=com.escavacaoinfinita.app">Google Play</a> · <a href="/escavacao-infinita-privacidade/">Política de privacidade</a></p>
+<header>
+  <h1>Everton Figueiredo · Jogos</h1>
+  <p>Jogos mobile feitos com carinho. Escolha um e divirta-se!</p>
+</header>
+
+<main>
+  <!--
+    COMO ADICIONAR UM JOGO NOVO: copie um bloco <article class="game"> ... </article>,
+    troque nome, descrição, ícone (coloque a imagem em /assets/) e os links.
+    Política de privacidade de cada jogo: pasta /nome-do-jogo-privacidade/index.html
+    O app-ads.txt da raiz vale para todos os jogos da mesma conta AdMob.
+  -->
+
+  <article class="game">
+    <div class="top">
+      <div class="icon" aria-hidden="true">⛏️</div>
+      <div>
+        <h2>Escavação Infinita: Mina Idle</h2>
+        <span class="tag">Idle · Aventura</span>
+      </div>
+    </div>
+    <p>Cave fundo, ache ouro e artefatos, derrote chefes e fique cada vez mais forte!</p>
+    <div class="links">
+      <a href="https://play.google.com/store/apps/details?id=com.escavacaoinfinita.app">Google Play</a>
+      <a class="sec" href="/escavacao-infinita-privacidade/">Política de privacidade</a>
+    </div>
+  </article>
+
+  <article class="game">
+    <div class="top">
+      <img class="icon" src="/assets/byte-defense.png" alt="Ícone do Byte Defense">
+      <div>
+        <h2>Byte Defense: Tower Defense</h2>
+        <span class="tag">Estratégia · Tower defense</span>
+      </div>
+    </div>
+    <p>Defenda seu servidor dos vírus! Torres, baús e chefões num tower defense nerd.</p>
+    <div class="links">
+      <span class="soon">Em breve na Google Play</span>
+      <a class="sec" href="/byte-defense-privacidade/">Política de privacidade</a>
+    </div>
+  </article>
+</main>
+
+<footer>Contato: <a style="color:var(--link)" href="mailto:j.everton.figueiredo@gmail.com">j.everton.figueiredo@gmail.com</a></footer>
 </body>
 </html>
